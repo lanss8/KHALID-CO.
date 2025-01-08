@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="hp.master.cs" Inherits="WebApplication25.hp" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title>KHALID&CO.</title>
+    <link rel="icon" type="image/x-icon" href="pics/fodark.png">
+    <style type="text/css">
+        .auto-style1 {
+            height: 258px;
+        }
+    </style>
+</head>
+<body style="background-color: gainsboro">
+    <form id="form1" runat="server">
+        <div>
+            <table width="100%" border="1">
+                <tr>
+                    <td colspan="2" class="auto-style1">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/pics/Logo.png" Height="325px" Width="1330px" />
+
+                        <h3 class="welcome-message">Welcome to KHALID&CO! Your dream property awaits!</h3>
+                        <style>
+                            .welcome-message {
+                                font-size: 25px;
+                                background-color: gold;
+                                color: #0E2442;
+                                font-family: 'Roboto', sans-serif;
+                                padding: 5px 15px;
+                                border-radius: 5px;
+                                display: inline-block;
+                                text-align: center;
+                            }
+                        </style>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:Menu ID="Menu2" runat="server" DynamicHorizontalOffset="6" Font-Bold="True" Font-Italic="True" Font-Names="Roboto" Font-Size="1em" ForeColor="Black" Height="25px" Orientation="Horizontal" StaticSubMenuIndent="10px" Width="1330px" RenderingMode="Table" BackColor="#CCCCCC">
+                            <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicMenuStyle BackColor="#F7F6F3" />
+                            <DynamicSelectedStyle BackColor="#5D7B9D" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Home Page.aspx" Text="Home Page" Value="Home Page"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Estate.aspx" Text="Estate" Value="Estate"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Apartments.aspx" Text="Apartments" Value="Apartments"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Register.aspx" Text="Register" Value="Register"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Log in.aspx" Text="Log in" Value="Log in"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Contact our team.aspx" Text="Contact our team" Value="Contact our team"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticSelectedStyle BackColor="#5D7B9D" />
+                        </asp:Menu>
+                    </td>
+                </tr>
+                <tr style="height: 600px" valign="top">
+                    <td style="width: 30%">
+                        <video autoplay="autoplay" loop="loop" controls="" width="406" muted="muted" preload="auto" style="border: solid 1px">
+                            <source type="video/mp4" src="vids\wt.mp4">
+                        </video>
+                        <asp:ImageButton ID="ImageButton2" runat="server" Height="354px" ImageUrl="~/pics/ad5.png" PostBackUrl="https://eyebleach.me/" Width="405px" />
+                    </td>
+                    <td style="width: 70%">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
